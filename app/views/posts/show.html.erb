@@ -1,7 +1,5 @@
 Information About the Post
-<ul>
-  <li> <%= @author.name %></li>
-  <li> <%= @author.hometown %></li>
-</ul>
+<%= render partial: "authors/author", locals: {post_author: @post.author} %>
+<%# NOTE: Because we are calling a partial from outside the current > app/views/posts folder, we must specify the folder that our author partial > is coming from by calling render 'authors/author' %>
 <%= @post.title %>
-<%= @post.content %>
+<%= @post.content %> 
